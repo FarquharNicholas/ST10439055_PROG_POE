@@ -4,9 +4,31 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        Functions Functions = new Functions();
-        Console.WriteLine("Hello, World!");
-        Functions.WelcomeMessage();
-        Functions.GreetUser();
+        Functions functions = new Functions();
+        functions.WelcomeMessage();
+        functions.GreetUser();
+
+       
+        while (true)
+        {
+            Console.Write("\nYou: ");
+            string userInput = Console.ReadLine();
+        
+            if (string.IsNullOrWhiteSpace(userInput))
+            {
+                Console.WriteLine("Stitch: Please type something!");
+                continue;
+            }
+
+            if (userInput.ToLower().Contains("bye") ||
+                userInput.ToLower().Contains("exit") ||
+                userInput.ToLower().Contains("quit"))
+            {
+                Console.WriteLine("Stitch: Goodbye! Stay secure!");
+                break;
+            }
+
+            functions.BasicQuestions(userInput);
+        }
     }
 }
