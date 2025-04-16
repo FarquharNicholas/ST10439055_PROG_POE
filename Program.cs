@@ -5,15 +5,16 @@ internal class Program
     private static void Main(string[] args)
     {
         Functions functions = new Functions();
+
         functions.WelcomeMessage();
+        functions.PlayVoice();
         functions.GreetUser();
 
-       
         while (true)
         {
             Console.Write("\nYou: ");
             string userInput = Console.ReadLine();
-        
+
             if (string.IsNullOrWhiteSpace(userInput))
             {
                 Console.WriteLine("Stitch: Please type something!");
@@ -28,7 +29,8 @@ internal class Program
                 break;
             }
 
-            functions.BasicQuestions(userInput);
+            functions.HandleUserInput(userInput);
         }
     }
 }
+
