@@ -1,32 +1,29 @@
 Stitch - Personal Cybersecurity Chatbot
-=======================================
-
 Overview
---------
-Stitch is a personal cybersecurity chatbot designed to help users understand the basics of cybersecurity, such as password security, phishing scams, and safe browsing. The chatbot provides helpful tips and responses to common questions related to these topics. It offers an interactive experience with voice playback and time-sensitive greetings based on the user's input.
+Stitch is a personal cybersecurity chatbot that helps users learn about basic cybersecurity topics like password security, phishing scams, and safe browsing. It gives tips and answers common questions. The chatbot has voice playback and greets users based on the time of day.
 
 Features
---------
-- Interactive User Experience: Users can ask questions related to password security, phishing, and safe browsing.
-- Voice Playback: Provides an audio greeting to the user and can play a custom voice message.
-- Time-based Greetings: The chatbot greets users with "Good Morning", "Good Afternoon", "Good Evening", or "Good Night" based on the current time.
-- User Input Handling: Validates input and provides relevant advice or responses related to cybersecurity topics.
-- Personalized Greetings: Users are prompted for their name, and the chatbot personalizes the interaction based on this information.
+Answers questions about password security, phishing, and safe browsing.
+
+Plays a voice greeting and can play custom voice messages.
+
+Says "Good Morning", "Good Afternoon", etc. based on the time.
+
+Checks user input and gives cybersecurity advice.
+
+Asks for the user's name and uses it in replies.
 
 Requirements
-------------
-To run the application, you need:
-- .NET Core SDK or .NET 5+ installed.
-- NAudio library for voice playback (installed via NuGet).
-- An MP3 file (e.g., `StitchVoice.mp3`) for voice output. Ensure the file is located in the path specified within the code.
+.NET Core SDK or .NET 5+ installed.
+
+NAudio library (install via NuGet).
+
+An MP3 file named StitchVoice.mp3 in the right folder for voice playback.
 
 Installation
-------------
-1. Clone the Repository
-
-git clone https://github.com/your-username/Stitch-Cybersecurity-Chatbot.git cd Stitch-Cybersecurity-Chatbot
-
-
+Clone the repository:
+git clone https://github.com/your-username/Stitch-Cybersecurity-Chatbot.git  
+cd Stitch-Cybersecurity-Chatbot  
 
 
 The chatbot will greet you, and you can begin asking questions about cybersecurity. Some example questions include:
