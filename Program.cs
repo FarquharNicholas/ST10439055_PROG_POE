@@ -5,11 +5,12 @@ internal class Program
     private static void Main(string[] args)
     {
         Functions functions = new Functions();
-
+        Console.ForegroundColor = ConsoleColor.Magenta;
         functions.WelcomeMessage();
         functions.PlayVoice();
+        Console.ForegroundColor = ConsoleColor.DarkCyan;
         functions.GreetUser();
-
+        
         while (true)
         {
             Console.Write("\nYou: ");
