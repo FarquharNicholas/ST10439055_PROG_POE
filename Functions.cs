@@ -106,7 +106,7 @@ class Functions
             userMemory.CurrentMood = detectedSentiment;
         }
 
-        // Try to detect topics of interest
+        // Detect topics of interest
         InterestDetector interestDetector = new InterestDetector();
         string detectedInterest = interestDetector.DetectInterest(input);
         if (!string.IsNullOrEmpty(detectedInterest))
@@ -214,7 +214,8 @@ class Functions
             "I'm not quite sure I understand. Could you rephrase that? I'm best at discussing cybersecurity topics like passwords, phishing, and safe browsing.",
             "I didn't catch that. Can you try asking about cybersecurity in a different way?",
             "I'm still learning! Can you ask me about password security, phishing, or safe browsing instead?",
-            $"Sorry {userMemory.UserName}, I didn't understand your question. Ask me about cybersecurity topics like passwords, phishing scams, or internet safety."
+            $"Sorry {userMemory.UserName}, I didn't understand your question. " +
+            $"\nAsk me about cybersecurity topics like passwords, phishing scams, or internet safety."
         };
 
         Console.WriteLine($"Stitch: {defaultResponses[random.Next(defaultResponses.Length)]}");
