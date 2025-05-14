@@ -9,8 +9,8 @@ internal class Program
         functions.WelcomeMessage();
         functions.PlayVoice();
         Console.ForegroundColor = ConsoleColor.DarkCyan;
-        functions.GreetUser();
-        
+        string userName = functions.GreetUser();
+
         while (true)
         {
             Console.Write("\nYou: ");
@@ -24,9 +24,10 @@ internal class Program
 
             if (userInput.ToLower().Contains("bye") ||
                 userInput.ToLower().Contains("exit") ||
+                userInput.ToLower().Contains("end") ||
                 userInput.ToLower().Contains("quit"))
             {
-                Console.WriteLine("Stitch: Goodbye! Stay secure!");
+                Console.WriteLine($"Stitch: Goodbye {userName}! Stay secure!");
                 break;
             }
 
@@ -34,4 +35,3 @@ internal class Program
         }
     }
 }
-
