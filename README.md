@@ -1,34 +1,83 @@
-Stitch - Personal Cybersecurity Chatbot
-Overview
-Stitch is a personal cybersecurity chatbot that helps users learn about basic cybersecurity topics like password security, phishing scams, and safe browsing. It gives tips and answers common questions. The chatbot has voice playback and greets users based on the time of day.
+Description
+Stitch is an interactive chatbot designed to educate users about cybersecurity topics. It provides personalized responses about password safety, phishing, secure browsing, VPNs, and more, while adapting to user moods and interests.
 
 Features
-Answers questions about password security, phishing, and safe browsing.
 
-Plays a voice greeting and can play custom voice messages.
+Basic Conversation Handling: Greetings, farewells, and general questions
 
-Says "Good Morning", "Good Afternoon", etc. based on the time.
+Cybersecurity Expertise: Answers questions about passwords, phishing, malware, etc.
 
-Checks user input and gives cybersecurity advice.
+Personalization: Detects user mood (worried, curious, frustrated) and interests
 
-Asks for the user's name and uses it in replies.
+Context Awareness: Remembers conversation history for follow-up questions
+
+Voice Greeting: Plays an introductory audio clip
+
+How It Works
+
+Startup: The chatbot greets the user, asks for their name, and plays a welcome voice clip.
+
+Input Processing:
+
+Basic questions (e.g., "Hi", "How are you?") go to BasicQuestionsHandler
+
+Security-related queries (e.g., "How to spot phishing?") go to SecurityQuestionsHandler
+
+Sentiment analysis adjusts responses for worried/frustrated users
+
+Response Generation:
+
+Uses predefined answer templates with randomization
+
+Adds personalized touches based on user interests (e.g., privacy, passwords)
+
+Exit: Type "bye", "quit", or "exit" to end the chat
+
+Code Structure
+
+Program.cs: Main entry point, manages chat loop
+
+UserInteraction.cs: Base class for conversation handlers
+
+BasicQuestionsHandler.cs: Handles greetings, farewells, and simple queries
+
+SecurityQuestionsHandler.cs: Provides cybersecurity advice
+
+UserMemory.cs: Stores user data (name, interests, conversation history)
+
+SentimentDetector.cs: Analyzes user mood from text
+
+InterestDetector.cs: Identifies topics of interest
+
+Functions.cs: Helper methods (voice, greetings, input handling)
 
 Requirements
-.NET Core SDK or .NET 5+ installed.
 
-NAudio library (install via NuGet).
+.NET 6.0+
 
-An MP3 file named StitchVoice.mp3 in the right folder for voice playback.
+NAudio library (for voice playback)
+
+Usage
+
+Run the program
+
+Enter your name when prompted
+
+Ask cybersecurity questions or chat normally
+
+Type "quit" to exit
+
+Example Queries
+
+"How do I create a strong password?"
+
+"What is phishing?"
+
+"Should I use a VPN?"
+
+"How can I tell if an email is fake?"
 
 Installation
 Clone the repository:
 git clone https://github.com/your-username/Stitch-Cybersecurity-Chatbot.git  
 cd Stitch-Cybersecurity-Chatbot  
-
-
-The chatbot will greet you, and you can begin asking questions about cybersecurity. Some example questions include:
-- "What is password security?"
-- "How can I identify phishing scams?"
-- "What should I know about safe browsing?"
-
-The chatbot will respond with helpful advice and play a voice message when appropriate.
