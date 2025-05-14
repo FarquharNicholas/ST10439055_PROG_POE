@@ -37,26 +37,26 @@ namespace ST10439055_PROG_POE
                 switch (userMemory.CurrentMood.ToLower())
                 {
                     case "worried":
-                        response = $"I understand you might be feeling concerned. {response}";
+                        response = $"I understand you might be feeling concerned. \n{response}";
                         break;
                     case "curious":
-                        response = $"I appreciate your curiosity! {response}";
+                        response = $"I appreciate your curiosity! \n{response}";
                         break;
                     case "frustrated":
-                        response = $"I can sense this might be frustrating. Let me help clarify. {response}";
+                        response = $"I can sense this might be frustrating. Let me help clarify. \n{response}";
                         break;
                     case "confused":
-                        response = $"No need to worry if this seems complex. {response}";
+                        response = $"No need to worry if this seems complex.\n{response}";
                         break;
                 }
             }
 
             // Add reference to interests if applicable
             var interests = userMemory.GetInterests();
-            if (interests.Count > 0 && random.Next(10) < 3) // 30% chance to mention interests
+            if (interests.Count > 0 && random.Next(10) < 3) // chance to mention interests
             {
                 string interest = interests[random.Next(interests.Count)];
-                response += $" Since you're interested in {interest}, you might also want to know that good {interest} practices contribute to your overall online security.";
+                response += $" Since you're interested in {interest}, you might also want to know that good {interest} practices contribute to your overall online security.\n";
             }
         }
     }
