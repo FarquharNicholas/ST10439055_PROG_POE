@@ -3,7 +3,6 @@ using System.Text.RegularExpressions;
 
 namespace ST10439055_PROG_POE
 {
-    //handles basic chatbot questions
     public class BasicQuestionsHandler : UserInteraction
     {
         
